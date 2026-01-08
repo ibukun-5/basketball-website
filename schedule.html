@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- Schedule page - Shows full season schedule with filter options -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaze Basketball - Schedule</title>
+    <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="author-credit">By Ibukun Odutayo</div>
+        <nav>
+            <div class="logo">
+                <img src="logo.svg" alt="Blaze Basketball Logo" class="logo-img">
+                <h1>Blaze Basketball</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+                <li><a href="roster.html">Roster</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero banner -->
+        <section class="schedule-hero">
+            <h1>2025-2026 Season Schedule</h1>
+            <p class="subtitle">Full Season Game Schedule</p>
+        </section>
+
+        <!-- Schedule content section -->
+        <section class="schedule-content">
+            <!-- Filter buttons to show All/Home/Away games -->
+            <div class="schedule-controls">
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="home">Home Games</button>
+                <button class="filter-btn" data-filter="away">Away Games</button>
+            </div>
+
+            <!-- Table container for scrolling on mobile -->
+            <div class="schedule-table-container">
+                <!-- Schedule table -->
+                <table class="schedule-table">
+                    <!-- Table header row -->
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Opponent</th>
+                            <th>Location</th>
+                            <th>Time</th>
+                            <th>Type</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <!-- Table body with game data -->
+                    <tbody>
+                        <!-- Game 1: Home game with win result -->
+                        <tr data-type="home">
+                            <td>Oct 5, 2025</td>
+                            <td>Eagles</td>
+                            <td>Home</td>
+                            <td>7:00 PM</td>
+                            <td>Regular</td>
+                            <td class="result-win">W 87-72</td>
+                        </tr>
+                        <!-- Game 2: Home game with loss result -->
+                        <tr data-type="home">
+                            <td>Oct 12, 2025</td>
+                            <td>Wolves</td>
+                            <td>Home</td>
+                            <td>7:30 PM</td>
+                            <td>Regular</td>
+                            <td class="result-loss">L 78-85</td>
+                        </tr>
+                        <!-- Game 3: Away game with win result -->
+                        <tr data-type="away">
+                            <td>Oct 19, 2025</td>
+                            <td>Lions</td>
+                            <td>Away</td>
+                            <td>6:30 PM</td>
+                            <td>Regular</td>
+                            <td class="result-win">W 94-81</td>
+                        </tr>
+                        <!-- Game 4: Away game with win result -->
+                        <tr data-type="away">
+                            <td>Oct 26, 2025</td>
+                            <td>Hawks</td>
+                            <td>Away</td>
+                            <td>8:00 PM</td>
+                            <td>Regular</td>
+                            <td class="result-win">W 91-76</td>
+                        </tr>
+                        <!-- Game 5: Home game with win result -->
+                        <tr data-type="home">
+                            <td>Nov 2, 2025</td>
+                            <td>Panthers</td>
+                            <td>Home</td>
+                            <td>7:00 PM</td>
+                            <td>Regular</td>
+                            <td class="result-win">W 88-74</td>
+                        </tr>
+                        <!-- Remaining games - no results yet (shown as "-") -->
+                        <tr data-type="away">
+                            <td>Nov 9, 2025</td>
+                            <td>Bears</td>
+                            <td>Away</td>
+                            <td>6:00 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="home">
+                            <td>Nov 16, 2025</td>
+                            <td>Tigers</td>
+                            <td>Home</td>
+                            <td>7:30 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="away">
+                            <td>Nov 23, 2025</td>
+                            <td>Eagles</td>
+                            <td>Away</td>
+                            <td>8:00 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="home">
+                            <td>Nov 30, 2025</td>
+                            <td>Lions</td>
+                            <td>Home</td>
+                            <td>6:30 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="away">
+                            <td>Dec 7, 2025</td>
+                            <td>Wolves</td>
+                            <td>Away</td>
+                            <td>7:00 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="away">
+                            <td>Dec 14, 2025</td>
+                            <td>Hawks</td>
+                            <td>Away</td>
+                            <td>7:30 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="home">
+                            <td>Dec 21, 2025</td>
+                            <td>Panthers</td>
+                            <td>Home</td>
+                            <td>7:00 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="away">
+                            <td>Jan 4, 2026</td>
+                            <td>Bears</td>
+                            <td>Away</td>
+                            <td>7:00 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="home">
+                            <td>Jan 11, 2026</td>
+                            <td>Tigers</td>
+                            <td>Home</td>
+                            <td>6:00 PM</td>
+                            <td>Regular</td>
+                            <td>-</td>
+                        </tr>
+                        <!-- Playoff games -->
+                        <tr data-type="away">
+                            <td>Jan 18, 2026</td>
+                            <td>Sharks</td>
+                            <td>Away</td>
+                            <td>8:00 PM</td>
+                            <td>Playoffs</td>
+                            <td>-</td>
+                        </tr>
+                        <tr data-type="away">
+                            <td>Jan 25, 2026</td>
+                            <td>Sharks</td>
+                            <td>Away</td>
+                            <td>7:00 PM</td>
+                            <td>Playoffs</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025-2026 Blaze Basketball. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for filter functionality and animations -->
+    <script src="schedule.js"></script>
+</body>
+</html>
+
+

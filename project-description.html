@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baltimore Blaze Basketball Website - Project Description</title>
+    <style>
+        :root {
+            --primary-red: #DC143C;
+            --primary-black: #000000;
+            --accent-white: #FFFFFF;
+            --text-gray: #CCCCCC;
+            --light-gray: #1A1A1A;
+            --dark-gray: #0D0D0D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.8;
+            color: var(--accent-white);
+            background-color: var(--primary-black);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--light-gray);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid var(--primary-red);
+            box-shadow: 0 5px 20px rgba(220, 20, 60, 0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-red);
+        }
+
+        .header h1 {
+            color: var(--primary-red);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .subtitle {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            color: var(--primary-red);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        .section p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--dark-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--primary-red);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background-color: var(--primary-red);
+            color: var(--accent-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .highlight-box {
+            background-color: var(--dark-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-red);
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-red);
+            font-size: 1.1rem;
+        }
+
+        .author-info {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--primary-red);
+        }
+
+        .author-info p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .author-info .author-name {
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .link-button {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: var(--accent-white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .link-button:hover {
+            background-color: var(--accent-white);
+            color: var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 2rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Baltimore Blaze Basketball Website</h1>
+            <p class="subtitle">A Professional Basketball Team Website Project</p>
+        </div>
+
+        <div class="section">
+            <h2>Project Overview</h2>
+            <p>This is a fully responsive basketball team website for the <strong>Baltimore Blaze</strong> basketball team. The website showcases team information, season schedule, player roster, and official merchandise store. Built with modern web technologies, it features a sleek black and red color scheme that represents the team's identity.</p>
+        </div>
+
+        <div class="section">
+            <h2>Website Pages</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Homepage</h3>
+                    <p>Welcome page with team introduction, quick navigation cards, and next game widget</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Bio Page</h3>
+                    <p>Team history, mission statement, achievements, and core values</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Schedule Page</h3>
+                    <p>Full season schedule with filter options and game results display</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Roster Page</h3>
+                    <p>Complete team roster with 15 players and their information</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Shop Page</h3>
+                    <p>Team merchandise store with product cards and add-to-cart functionality</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <div class="highlight-box">
+                <p>✅ <strong>Fully Responsive Design</strong> - Works perfectly on mobile, tablet, and desktop devices</p>
+                <p>✅ <strong>Interactive Elements</strong> - Schedule filtering, animations, and hover effects</p>
+                <p>✅ <strong>Game Results</strong> - Display wins/losses with scores for completed games</p>
+                <p>✅ <strong>Modern UI/UX</strong> - Clean design with smooth animations and transitions</p>
+                <p>✅ <strong>Consistent Navigation</strong> - Easy navigation between all pages</p>
+                <p>✅ <strong>Team Branding</strong> - Custom logo and red/black color scheme throughout</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technologies Used</h2>
+            <div class="tech-list">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">SVG</span>
+                <span class="tech-badge">Responsive Design</span>
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--text-gray);">The website uses semantic HTML5 structure, CSS3 with variables and modern layouts (Flexbox/Grid), and vanilla JavaScript for interactivity and animations.</p>
+        </div>
+
+        <div class="section">
+            <h2>Design Highlights</h2>
+            <p><strong>Color Scheme:</strong> Primary Red (#DC143C) and Black (#000000) with white accents</p>
+            <p><strong>Layout:</strong> Maximum content width of 1200px, responsive grid layouts, and modern typography</p>
+            <p><strong>User Experience:</strong> Smooth animations, clear navigation, and intuitive interface design</p>
+        </div>
+
+        <div class="section">
+            <h2>Project Details</h2>
+            <p><strong>Season:</strong> 2025-2026</p>
+            <p><strong>Team:</strong> Baltimore Blaze</p>
+            <p><strong>Tagline:</strong> "Defence Wins Champions"</p>
+            <p><strong>Total Pages:</strong> 5 main pages (Home, Bio, Schedule, Roster, Shop)</p>
+            <p><strong>Roster Size:</strong> 15 players</p>
+            <p><strong>Schedule:</strong> 16 games with results for first 5 games</p>
+        </div>
+
+        <div class="author-info">
+            <p>Project Created By</p>
+            <p class="author-name">Ibukun Odutayo</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-gray);">This project demonstrates proficiency in HTML, CSS, and JavaScript web development</p>
+        </div>
+    </div>
+</body>
+</html>
+

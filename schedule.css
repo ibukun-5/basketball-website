@@ -1,0 +1,320 @@
+/* Schedule page CSS - Styles for the schedule page with table */
+
+/* CSS Variables - Define colors used throughout the page */
+:root {
+    --primary-red: #DC143C;      /* Team red color */
+    --primary-black: #000000;     /* Team black color */
+    --accent-white: #FFFFFF;      /* White for text */
+    --text-gray: #CCCCCC;         /* Light gray for secondary text */
+    --light-gray: #1A1A1A;        /* Dark gray for backgrounds */
+    --dark-gray: #0D0D0D;         /* Very dark gray */
+    --table-hover: #2A1A1A;       /* Dark red for table row hover */
+}
+
+/* Reset all default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Makes padding included in width calculations */
+}
+
+/* Body styling - applies to entire page */
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;  /* Space between lines of text */
+    color: var(--accent-white);  /* White text */
+    background-color: var(--primary-black);  /* Black background */
+}
+
+header {
+    background-color: var(--primary-black);
+    color: var(--accent-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.author-credit {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    color: var(--accent-white);
+    font-size: 0.9rem;
+    font-style: italic;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--accent-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-red);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.schedule-hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-black) 100%);
+    color: var(--accent-white);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.schedule-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.schedule-hero .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Schedule content container */
+.schedule-content {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Filter buttons container (All Games, Home Games, Away Games) */
+.schedule-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;  /* Wrap buttons on smaller screens */
+}
+
+/* Filter button styling */
+.filter-btn {
+    background-color: var(--light-gray);
+    color: var(--accent-white);
+    border: 2px solid var(--primary-red);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;  /* Shows hand cursor on hover */
+    transition: all 0.3s ease;  /* Smooth color change */
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-red);
+    color: var(--accent-white);
+    border-color: var(--primary-red);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-red);
+    color: var(--accent-white);
+    border-color: var(--primary-red);
+}
+
+.schedule-table-container {
+    overflow-x: auto;
+}
+
+/* Schedule table styling */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;  /* Removes space between table cells */
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;  /* Hides rounded corners on cells */
+    box-shadow: 0 2px 10px rgba(220, 20, 60, 0.2);  /* Red shadow */
+}
+
+/* Table header row */
+.schedule-table thead {
+    background-color: var(--primary-black);
+    color: var(--accent-white);
+}
+
+/* Table header cells */
+.schedule-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--primary-red);  /* Red border below header */
+}
+
+.schedule-table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.schedule-table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.schedule-table tbody tr {
+    border-bottom: 1px solid #333333;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: var(--table-hover);
+}
+
+.schedule-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.schedule-table td {
+    padding: 1rem;
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+.schedule-table td:first-child {
+    font-weight: 600;
+    color: var(--accent-white);
+}
+
+.schedule-table td:nth-child(2) {
+    font-weight: 600;
+    color: var(--primary-red);
+}
+
+.schedule-table td:nth-child(3) {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.schedule-table td:nth-child(5) {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.schedule-table tr[data-type="home"] td:nth-child(3) {
+    color: var(--primary-red);
+}
+
+.schedule-table tr[data-type="away"] td:nth-child(3) {
+    color: var(--accent-white);
+}
+
+.schedule-table td:nth-child(6) {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Win result styling - green color */
+.result-win {
+    color: #4CAF50;  /* Green for wins */
+    font-weight: bold;
+}
+
+/* Loss result styling - red color */
+.result-loss {
+    color: #F44336;  /* Red for losses */
+    font-weight: bold;
+}
+
+.schedule-table tr.hidden {
+    display: none;
+}
+
+footer {
+    background-color: var(--primary-black);
+    color: var(--accent-white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .schedule-hero h1 {
+        font-size: 2rem;
+    }
+
+    .schedule-hero .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .schedule-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .schedule-table {
+        font-size: 0.9rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .schedule-content {
+        padding: 1rem;
+    }
+}
+
+

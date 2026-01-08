@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baltimore Blaze Basketball Website - README</title>
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-red: #DC143C;
+            --primary-black: #000000;
+            --accent-white: #FFFFFF;
+            --text-gray: #CCCCCC;
+            --light-gray: #1A1A1A;
+            --dark-gray: #0D0D0D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: var(--accent-white);
+            background-color: var(--primary-black);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--light-gray);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid var(--primary-red);
+        }
+
+        h1 {
+            color: var(--primary-red);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-red);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: var(--primary-red);
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        h3 {
+            color: var(--accent-white);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            color: var(--text-gray);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        code {
+            background-color: var(--dark-gray);
+            color: var(--primary-red);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        pre {
+            background-color: var(--dark-gray);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        pre code {
+            color: var(--text-gray);
+            background: none;
+            padding: 0;
+        }
+
+        strong {
+            color: var(--accent-white);
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        .author-box {
+            background-color: var(--dark-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-red);
+            margin: 2rem 0;
+        }
+
+        .note-box {
+            background-color: rgba(220, 20, 60, 0.1);
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-red);
+            margin-top: 2rem;
+        }
+
+        a {
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .file-structure {
+            background-color: var(--dark-gray);
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--text-gray);
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Baltimore Blaze Basketball Website</h1>
+        
+        <p>A professional basketball team website featuring team information, schedule, roster, and merchandise store. Built with HTML, CSS, and JavaScript.</p>
+
+        <h2><span class="emoji">🏀</span> Project Overview</h2>
+        <p>This is a fully responsive basketball team website for the <strong>Baltimore Blaze</strong> basketball team. The website showcases the team's information, season schedule, player roster, and official merchandise store. The design features a modern black and red color scheme that represents the team's identity.</p>
+
+        <h2><span class="emoji">✨</span> Features</h2>
+        
+        <h3>Pages</h3>
+        <ul>
+            <li><strong>Homepage</strong> - Welcome page with team introduction, quick navigation, and next game widget</li>
+            <li><strong>Bio Page</strong> - Team history, mission, achievements, and core values</li>
+            <li><strong>Schedule Page</strong> - Full season schedule with filter options (All/Home/Away games) and game results</li>
+            <li><strong>Roster Page</strong> - Complete team roster with player numbers, names, positions, and heights</li>
+            <li><strong>Shop Page</strong> - Team merchandise store with product cards and add-to-cart functionality</li>
+        </ul>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li>✅ Fully responsive design (works on mobile, tablet, and desktop)</li>
+            <li>✅ Smooth animations and transitions</li>
+            <li>✅ Interactive schedule filtering</li>
+            <li>✅ Game results display (wins/losses with scores)</li>
+            <li>✅ Modern UI with red and black color scheme</li>
+            <li>✅ Consistent navigation across all pages</li>
+            <li>✅ Logo integration</li>
+            <li>✅ Author credit display</li>
+        </ul>
+
+        <h2><span class="emoji">📁</span> File Structure</h2>
+        <div class="file-structure">website1/
+├── index.html          # Homepage
+├── index.css           # Homepage styles
+├── index.js            # Homepage JavaScript
+├── bio.html            # Team bio page
+├── bio.css             # Bio page styles
+├── bio.js              # Bio page JavaScript
+├── schedule.html       # Schedule page
+├── schedule.css        # Schedule page styles
+├── schedule.js         # Schedule page JavaScript
+├── roster.html         # Roster page
+├── roster.css          # Roster page styles
+├── roster.js           # Roster page JavaScript
+├── shop.html           # Shop page
+├── shop.css            # Shop page styles
+├── shop.js             # Shop page JavaScript
+├── logo.svg            # Team logo
+└── README.md           # This file</div>
+
+        <h2><span class="emoji">🎨</span> Design & Styling</h2>
+        
+        <h3>Color Scheme</h3>
+        <ul>
+            <li><strong>Primary Red</strong>: #DC143C (Crimson)</li>
+            <li><strong>Primary Black</strong>: #000000</li>
+            <li><strong>Accent White</strong>: #FFFFFF</li>
+            <li><strong>Text Gray</strong>: #CCCCCC</li>
+            <li><strong>Background Gray</strong>: #1A1A1A</li>
+        </ul>
+
+        <h3>Typography</h3>
+        <p>Font Family: Arial, Helvetica, sans-serif<br>
+        Clean, readable typography optimized for sports content</p>
+
+        <h3>Layout</h3>
+        <ul>
+            <li>Maximum content width: 1200px</li>
+            <li>Responsive grid layouts</li>
+            <li>Flexbox and CSS Grid for modern layouts</li>
+        </ul>
+
+        <h2><span class="emoji">🛠️</span> Technologies Used</h2>
+        <ul>
+            <li><strong>HTML5</strong> - Semantic markup structure</li>
+            <li><strong>CSS3</strong> - Styling with CSS variables, flexbox, grid, and animations</li>
+            <li><strong>JavaScript (ES6)</strong> - Interactivity and animations</li>
+            <li><strong>SVG</strong> - Scalable logo graphics</li>
+        </ul>
+
+        <h2><span class="emoji">🚀</span> How to Use</h2>
+        
+        <h3>Viewing the Website</h3>
+        <ol>
+            <li><strong>Open in Browser</strong><br>
+                Simply open <code>index.html</code> in any modern web browser. All pages are linked and will work locally.</li>
+            <li><strong>Navigation</strong><br>
+                Use the navigation bar at the top to switch between pages. Click on cards/buttons to navigate to different sections.</li>
+            <li><strong>Schedule Page</strong><br>
+                Use filter buttons to view All Games, Home Games, or Away Games. View game results for completed games (first 5 games).</li>
+            <li><strong>Shop Page</strong><br>
+                Browse team merchandise. Click "Add to Cart" buttons (visual feedback provided).</li>
+        </ol>
+
+        <h2><span class="emoji">📱</span> Responsive Design</h2>
+        <p>The website is fully responsive and adapts to different screen sizes:</p>
+        <ul>
+            <li><strong>Desktop</strong>: Full layout with multiple columns</li>
+            <li><strong>Tablet</strong>: Adjusted layouts for medium screens</li>
+            <li><strong>Mobile</strong>: Single column layout with optimized spacing</li>
+        </ul>
+
+        <h2><span class="emoji">🎯</span> Key Functionality</h2>
+        
+        <h3>Homepage</h3>
+        <ul>
+            <li>Hero section with team name and tagline</li>
+            <li>Quick navigation cards to Bio and Schedule</li>
+            <li>Next game widget showing upcoming game details</li>
+            <li>About section with team overview</li>
+        </ul>
+
+        <h3>Schedule Page</h3>
+        <ul>
+            <li>Filter functionality (All/Home/Away games)</li>
+            <li>Game results for first 5 games (4 wins, 1 loss)</li>
+            <li>Full season schedule with dates, opponents, locations, and times</li>
+            <li>Color-coded results (green for wins, red for losses)</li>
+        </ul>
+
+        <h3>Roster Page</h3>
+        <ul>
+            <li>Complete team roster with 15 players</li>
+            <li>Player information: number, name, position, height</li>
+            <li>Responsive table design</li>
+        </ul>
+
+        <h3>Shop Page</h3>
+        <ul>
+            <li>Product grid layout</li>
+            <li>6 merchandise items</li>
+            <li>Add to cart functionality with visual feedback</li>
+            <li>Product cards with hover effects</li>
+        </ul>
+
+        <h2><span class="emoji">📝</span> Code Organization</h2>
+        
+        <h3>HTML Structure</h3>
+        <ul>
+            <li>Semantic HTML5 elements (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>)</li>
+            <li>Accessible markup with proper alt tags</li>
+            <li>Clear content organization</li>
+        </ul>
+
+        <h3>CSS Architecture</h3>
+        <ul>
+            <li>CSS variables for consistent theming</li>
+            <li>Modular CSS per page</li>
+            <li>Responsive media queries</li>
+            <li>Smooth transitions and animations</li>
+        </ul>
+
+        <h3>JavaScript Features</h3>
+        <ul>
+            <li>DOM manipulation</li>
+            <li>Event listeners for interactivity</li>
+            <li>Intersection Observer API for scroll animations</li>
+            <li>Smooth animations and transitions</li>
+        </ul>
+
+        <div class="author-box">
+            <h2><span class="emoji">👤</span> Author</h2>
+            <p><strong>By Ibukun Odutayo</strong></p>
+        </div>
+
+        <h2><span class="emoji">📅</span> Season Information</h2>
+        <ul>
+            <li><strong>Season</strong>: 2025-2026</li>
+            <li><strong>Team</strong>: Baltimore Blaze</li>
+            <li><strong>Tagline</strong>: "Defence Wins Champions"</li>
+        </ul>
+
+        <h2><span class="emoji">🎓</span> Learning Outcomes</h2>
+        <p>This project demonstrates:</p>
+        <ul>
+            <li>HTML5 semantic structure</li>
+            <li>CSS3 styling with variables, flexbox, and grid</li>
+            <li>JavaScript DOM manipulation</li>
+            <li>Responsive web design principles</li>
+            <li>Modern web development practices</li>
+            <li>User interface design</li>
+            <li>Interactive web elements</li>
+        </ul>
+
+        <h2><span class="emoji">📄</span> License</h2>
+        <p>This project is created for educational purposes.</p>
+
+        <div class="note-box">
+            <p><strong>Note</strong>: This website is a demonstration project. All team names, player names, and game data are fictional and used for educational purposes only.</p>
+        </div>
+    </div>
+</body>
+</html>
+

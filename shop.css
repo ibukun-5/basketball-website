@@ -1,0 +1,265 @@
+/* Shop page CSS - Styles for the team store/shop page */
+
+/* CSS Variables - Define colors used throughout the page */
+:root {
+    --primary-red: #DC143C;      /* Team red color */
+    --primary-black: #000000;     /* Team black color */
+    --accent-white: #FFFFFF;      /* White for text */
+    --text-gray: #CCCCCC;         /* Light gray for secondary text */
+    --light-gray: #1A1A1A;        /* Dark gray for backgrounds */
+    --dark-gray: #0D0D0D;         /* Very dark gray */
+}
+
+/* Reset all default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Makes padding included in width calculations */
+}
+
+/* Body styling - applies to entire page */
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;  /* Space between lines of text */
+    color: var(--accent-white);  /* White text */
+    background-color: var(--primary-black);  /* Black background */
+}
+
+header {
+    background-color: var(--primary-black);
+    color: var(--accent-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.author-credit {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    color: var(--accent-white);
+    font-size: 0.9rem;
+    font-style: italic;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--accent-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-red);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.shop-hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-black) 100%);
+    color: var(--accent-white);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.shop-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.shop-hero .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.shop-content {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Products grid - responsive grid layout */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    gap: 2rem;  /* Space between product cards */
+}
+
+/* Individual product card */
+.product-card {
+    background-color: var(--dark-gray);
+    border: 2px solid var(--primary-red);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effects */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+}
+
+/* Product card hover effect - lifts up and changes border */
+.product-card:hover {
+    transform: translateY(-5px);  /* Moves up 5px */
+    box-shadow: 0 5px 20px rgba(220, 20, 60, 0.4);  /* Red shadow */
+    border-color: var(--accent-white);  /* White border on hover */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-red);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem;
+}
+
+.product-image svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-card h3 {
+    color: var(--accent-white);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.product-price {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Add to cart button */
+.add-to-cart-btn {
+    background-color: var(--primary-red);
+    color: var(--accent-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;  /* Shows hand cursor */
+    transition: all 0.3s ease;  /* Smooth color change */
+    width: 100%;  /* Full width of card */
+    margin-top: auto;  /* Pushes button to bottom of card */
+}
+
+/* Button hover effect */
+.add-to-cart-btn:hover {
+    background-color: var(--accent-white);  /* White background */
+    color: var(--primary-red);  /* Red text */
+    transform: scale(1.05);  /* Slightly larger on hover */
+}
+
+footer {
+    background-color: var(--primary-black);
+    color: var(--accent-white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .shop-hero h1 {
+        font-size: 2rem;
+    }
+
+    .shop-hero .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .shop-content {
+        padding: 1rem;
+    }
+}
+
+/* 2 columns on medium screens */
+@media (min-width: 600px) and (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
