@@ -137,24 +137,21 @@ main {
 }
 
 /* Image Gallery Styles */
-.image-gallery {
-    margin: 3rem 0;
-    padding: 2rem 0;
-}
-
 .gallery-title {
     color: var(--primary-red);
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 0;
     font-weight: bold;
 }
 
-.gallery-grid {
+.bio-section .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0;
+    margin-top: 1.5rem;
 }
 
 .gallery-item {
